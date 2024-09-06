@@ -1,0 +1,168 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #1d2549, #7a4fa9);
+}
+.card{
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.37);
+  border-radius: 10px;
+}
+.main_container {
+  min-height: 100vh;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main_container h1 {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_container button{
+  height: 2rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  width: 20%;
+}
+.weather-card{
+margin-top: 20px;
+}
+
+.container {
+  height: auto;
+  width: 25%;
+  padding: 30px;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+}
+
+.icon_img {
+  height: 300px;
+  width: auto;
+}
+
+.card_top {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.temp_div {
+  position: absolute;
+  top: 77%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  color: black;
+  font-size: 1.2rem;
+  /* Adjust font size */
+  z-index: 1;
+}
+.temp_div h2{
+  font-weight: bold;
+  background-color: transparent;
+  -webkit-text-stroke: 2px  black;
+  -webkit-background-clip: text;
+}
+
+.container button {
+  width: 50%;
+  height: 2rem;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: #eea735;
+  color: blue;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.container button:hover {
+  background-color: #f7a41f;
+  cursor: pointer;
+}
+
+.container_content {
+  text-align: center;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+.card-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 9999; 
+}
+
+.spinner {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%; 
+  width: 120px; 
+  height: 120px; 
+  animation: spin 2s linear infinite; 
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@media (max-width: 800px) {
+  .container {
+      width: 90%;
+  }
+
+  .icon_img {
+      height: 200px;
+      width: auto;
+      max-width: 400px;
+      margin: 0 auto;
+  }
+}
